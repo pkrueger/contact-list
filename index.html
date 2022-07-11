@@ -17,7 +17,7 @@
       <i class="fa fa-fw fa-address-book"></i>
       <span>My Contact List</span>
     </h1>
-    <!-- TODO show the new-contact-form when this button is clicked -->
+    <!-- TODO: show the new-contact-form when this button is clicked -->
     <button class="fab" onclick="toggleAddContactForm()" title="New Contact">
       <i class="fa fa-lg fa-plus-circle"></i>
     </button>
@@ -26,8 +26,8 @@
   </header>
 
   <main class="container">
-
-    <form class="card mt-1 mb-1" id="new-contact-form" class="" onsubmit="addContact(event)">
+    <!-- TODO: add hidden class -->
+    <form class="card mt-1 mb-1 hidden" id="new-contact-form" onsubmit="addContact(event)">
       <div>
         <h4 class="mt-1 mb-1">
           <i class="fa fa-fw fa-user"></i>
@@ -36,39 +36,29 @@
       </div>
       <div>
         <label for="name">Name:</label>
-        <input type="text" name="name">
+        <input type="text" name="name" required>
+      </div>
+
+      <div>
+        <label for="phone">Phone Number:</label>
+        <input type="text" name="phone" required>
+      </div>
+
+      <div>
+        <label for="emergency-contact">Emergency Contact</label>
+        <input type="checkbox" name="emergencyContactBox">
       </div>
 
       <hr>
       <div class="d-flex space-between">
         <button type="submit">Submit</button>
-        <!-- TODO hide this form when this button is clicked -->
+        <!-- TODO: hide this form when this button is clicked -->
         <button class="btn-cancel" type="button" onclick="toggleAddContactForm()">cancel</button>
       </div>
     </form>
 
     <div class="contacts" id="contact-list">
-      <!-- TODO Remove these templates and draw them using JavaScript -->
-      <div class="card mt-1 mb-1">
-        <h3 class="mt-1 mb-1">Jimmy Tester</h3>
-        <div class="d-flex space-between">
-          <p>
-            <i class="fa fa-fw fa-phone"></i>
-            <span>(777) 777-7777</span>
-          </p>
-          <i class="action fa fa-trash text-danger"></i>
-        </div>
-      </div>
-      <div class="card mt-1 mb-1 emergency-contact">
-        <h3 class="mt-1 mb-1">Emergency Contact Tester</h3>
-        <div class="d-flex space-between">
-          <p>
-            <i class="fa fa-fw fa-phone"></i>
-            <span>(777) 777-7777</span>
-          </p>
-          <i class="action fa fa-trash text-danger"></i>
-        </div>
-      </div>
+      
     </div>
   </main>
 

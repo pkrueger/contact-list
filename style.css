@@ -16,7 +16,7 @@ body{
   background-color: var(--bg);
   font-size: 16pt;
   color: var(--text-color);
-  /* TODO Add font-family from google */
+  /* TODO: Add font-family from google */
 }
 
 p{
